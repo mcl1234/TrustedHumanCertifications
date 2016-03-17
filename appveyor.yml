@@ -42,16 +42,17 @@ before_deploy:
   - rd /s /q %cd%\ucoin_release\sources\ui\package\node_modules
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
   - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\* 1> null
+  - move duniter-win-x64.zip %cd%\ucoin\
 
 deploy:
-  release: ucoin-v$(APPVEYOR_REPO_TAG_NAME)
+  release: v0.20.0a18
   description: 'Appveyor test'
   provider: GitHub
   auth_token:
     secure: Vp/M0r0i1yhGR2nhrPWEbTiDIF6r0cmwbNDFZUzdFe5clWxPXtuC0lgIpOQI78zt
-  artifact: /.*duniter-win-x64\.zip/
-  draft: false
-  prerelease: true
+  artifact: /duniter-win-x64\.zip/
+  draft: true
+  prerelease: false
   on:
     branch: appveyor
     appveyor_repo_tag: false
