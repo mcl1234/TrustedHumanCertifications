@@ -27,7 +27,7 @@ function CFSCore(rootPath, qfs, parent) {
    * @returns {*|any|Q.Promise<void>} Promise of creation.
    */
   function createDeletionFolder() {
-    return deletionFolderPromise || (deletionFolderPromise = qfs.makeTree(path.join(rootPath, '.deleted')));
+    return deletionFolderPromise || (deletionFolderPromise = that.makeTree('.deleted'));
   }
 
   /**
@@ -154,7 +154,17 @@ function CFSCore(rootPath, qfs, parent) {
    * Create a directory tree.
    * @param treePath Tree path to create.
    */
-  this.makeTree = (treePath) => qfs.makeTree(path.join(rootPath, treePath));
+  this.makeTree = (treePath) => co(function*(){
+    try {
+      yield qfs.makeTree(path.join(rootPath, treePath));
+    } catch (e) {
+      try {
+        yield qfs.makeDirectory(path.join(rootPath, treePath));
+      } catch (e2) {
+        console.error(e2.stack);
+      }
+    }
+  });
 
   /**
    * Write JSON object to given file.
