@@ -16,7 +16,7 @@ test_script:
 
 build: off
 
-before_deploy:
+after_test:
   - choco install -y wget 7zip
   - set PATH="C:\Program Files\7-Zip";%PATH%
   # GUI Version
