@@ -34,7 +34,7 @@ before_deploy:
   - set NW_GZ=%NW%.zip
   - echo %NW_GZ%
   - wget http://dl.nwjs.io/%NW_RELEASE%/%NW_GZ%
-  - 7z x %NW_GZ%
+  - 7z x %NW_GZ% 1> null
   - move %NW% %cd%\ucoin_release\nw
   - mkdir %cd%\ucoin_release\sources
   - xcopy %SRC%\gui\* %cd%\ucoin_release\nw\ /s /e
