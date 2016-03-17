@@ -42,12 +42,11 @@ after_test:
   - move duniter-win-x64.zip %cd%\ucoin\
 
 artifacts:
-  - path: $(APPVEYOR_REPO_PATH)\duniter-win-x64.zip
+  - path: duniter-win-x64.zip
     name: Duniter
 
 deploy:
   release: v0.20.0a18
-  description: 'Appveyor test'
   provider: GitHub
   auth_token:
     secure: Vp/M0r0i1yhGR2nhrPWEbTiDIF6r0cmwbNDFZUzdFe5clWxPXtuC0lgIpOQI78zt
