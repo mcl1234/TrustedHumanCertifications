@@ -46,9 +46,9 @@ deploy:
   provider: GitHub
   auth_token:
     secure: Vp/M0r0i1yhGR2nhrPWEbTiDIF6r0cmwbNDFZUzdFe5clWxPXtuC0lgIpOQI78zt
-  artifact: /duniter-win-x64.zip/
+  artifact: /.*duniter-win-x64.zip/
   draft: true
-  prerelease: false
+  prerelease: true
   on:
     branch: appveyor
     appveyor_repo_tag: false
