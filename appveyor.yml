@@ -5,9 +5,6 @@ environment:
 platform:
   - x64
 
-init:
-- ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - node -v
@@ -42,7 +39,10 @@ before_deploy:
   - rd /s /q %cd%\ucoin_release\sources\ui\package\node_modules
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
   - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\* 1> null
-  - move duniter-win-x64.zip %cd%\ucoin\
+
+artifacts:
+  - path: C:\projects\duniter-win-x64.zip
+    name: Duniter
 
 deploy:
   release: v0.20.0a18
@@ -50,12 +50,9 @@ deploy:
   provider: GitHub
   auth_token:
     secure: Vp/M0r0i1yhGR2nhrPWEbTiDIF6r0cmwbNDFZUzdFe5clWxPXtuC0lgIpOQI78zt
-  artifact: /duniter-win-x64\.zip/
+  artifact: /.*\.zip/
   draft: true
   prerelease: true
   on:
     branch: appveyor
     appveyor_repo_tag: false
-
-on_finish:
-- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
