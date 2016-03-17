@@ -38,8 +38,6 @@ before_deploy:
   - xcopy %SRC%\* %cd%\ucoin_release\sources\ /s /e
   - rd /s /q %cd%\ucoin_release\sources\ui\package\node_modules
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
-  - rd /s /q %cd%\ucoin_release\sources\.git\
-  - rd /s /q %cd%\ucoin_release\sources\test\
   - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\*
 
 deploy:
