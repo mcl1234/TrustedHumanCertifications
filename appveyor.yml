@@ -24,7 +24,7 @@ after_test:
   - echo %SRC%
   - cd ..
   - mkdir ucoin_release
-  - set NW_RELEASE=v0.13.0-rc2
+  - set NW_RELEASE=v0.13.0-rc3
   - echo %NW_RELEASE%
   - set NW=nwjs-%NW_RELEASE%-win-x64
   - echo %NW%
@@ -40,14 +40,13 @@ after_test:
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
   - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\* 1> null
   - move duniter-win-x64.zip %cd%\ucoin\
-  - cd ucoin
 
 artifacts:
   - path: duniter-win-x64.zip
     name: Duniter
 
 deploy:
-  release: v0.20.0a18
+  release: v0.20.0a18v2
   provider: GitHub
   auth_token:
     secure: Vp/M0r0i1yhGR2nhrPWEbTiDIF6r0cmwbNDFZUzdFe5clWxPXtuC0lgIpOQI78zt
