@@ -33,8 +33,9 @@ before_deploy:
   - wget http://dl.nwjs.io/%NW_RELEASE%/%NW_GZ%
   - 7z x %NW_GZ%
   - move %NW% %cd%\ucoin_release\nw
+  - mkdir %cd%\ucoin_release\sources
   - xcopy %SRC%\gui\* %cd%\ucoin_release\nw\ /s /e
-  - xcopy %SRC%\ %cd%\ucoin_release\sources\
+  - xcopy %SRC%\* %cd%\ucoin_release\sources\ /s /e
   - rd /s /q %cd%\ucoin_release\sources\ui\package\node_modules
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
   - rd /s /q %cd%\ucoin_release\sources\.git\
