@@ -5,6 +5,9 @@ environment:
 platform:
   - x64
 
+init:
+- ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - node -v
@@ -38,17 +41,20 @@ before_deploy:
   - xcopy %SRC%\* %cd%\ucoin_release\sources\ /s /e
   - rd /s /q %cd%\ucoin_release\sources\ui\package\node_modules
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
-  - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\*
+  - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\* 1> null
 
 deploy:
-  release: ucoin-v$(appveyor_build_version)
+  release: ucoin-v$(APPVEYOR_REPO_TAG_NAME)
   description: 'Appveyor test'
   provider: GitHub
   auth_token:
     secure: Vp/M0r0i1yhGR2nhrPWEbTiDIF6r0cmwbNDFZUzdFe5clWxPXtuC0lgIpOQI78zt
-  artifact: /.*duniter-win-x64.zip/
-  draft: true
+  artifact: /.*duniter-win-x64\.zip/
+  draft: false
   prerelease: true
   on:
     branch: appveyor
     appveyor_repo_tag: false
+
+on_finish:
+- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
