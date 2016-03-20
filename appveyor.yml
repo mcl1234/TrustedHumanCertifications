@@ -24,27 +24,28 @@ after_test:
   - set SRC=%cd%
   - echo %SRC%
   - copy misc\MSVSVersion.py %APPDATA%\npm\node_modules\nw-gyp\gyp\pylib\gyp\MSVSVersion.py
+  - set NW_VERSION=0.13.0-rc3
   - set NW_RELEASE=v0.13.0-rc3
   - echo %NW_RELEASE%
   - cd node_modules/wotb
   - npm install --build-from-source
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 configure
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 build
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 configure
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 build
   - copy %cd%\lib\binding\Release\node-webkit-%NW_RELEASE%-win32-x64\wotb.node %cd%\lib\binding\Release\node-v47-win32-x64\wotb.node /Y
   - cd ../naclb
   - npm install --build-from-source
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 configure
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 build
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 configure
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 build
   - copy %cd%\lib\binding\Release\node-webkit-%NW_RELEASE%-win32-x64\naclb.node %cd%\lib\binding\Release\node-v47-win32-x64\naclb.node /Y
   - cd ../scryptb
   - npm install --build-from-source
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 configure
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 build
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 configure
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 build
   - copy %cd%\lib\binding\Release\node-webkit-%NW_RELEASE%-win32-x64\scryptb.node %cd%\lib\binding\Release\node-v47-win32-x64\scryptb.node /Y
   - cd ../sqlite3b
   - npm install --build-from-source
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 configure
-  - node-pre-gyp --runtime=node-webkit --target=%NW_RELEASE% --msvs_version=2015 build
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 configure
+  - node-pre-gyp --runtime=node-webkit --target=%NW_VERSION% --msvs_version=2015 build
   - copy %cd%\lib\binding\node-webkit-%NW_RELEASE%-win32-x64\node_sqlite3.node %cd%\lib\binding\node-v47-win32-x64\node_sqlite3.node /Y
   - cd ../..
   - mkdir ucoin_release
