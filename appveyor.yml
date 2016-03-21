@@ -66,7 +66,7 @@ after_test:
   - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\* 1> null
   - move duniter-win-x64.zip %cd%\ucoin\
   - iscc %cd%\ucoin_release\sources\duniter.iss /DROOT_PATH=%cd%\ucoin_release
-  - move Duniter.exe %cd%\ucoin\
+  - move %cd%\ucoin_release\Duniter.exe %cd%\ucoin\
 
 artifacts:
   - path: Duniter.exe
