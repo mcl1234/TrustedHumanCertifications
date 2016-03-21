@@ -64,14 +64,14 @@ after_test:
   - rd /s /q %cd%\ucoin_release\sources\ui\package\node_modules
   - rd /s /q %cd%\ucoin_release\sources\ui\package\bower_components
   - 7z a -tzip duniter-win-x64.zip %cd%\ucoin_release\* 1> null
-  - move duniter-win-x64.zip %cd%\ucoin\
+  - move duniter-win-x64.zip %cd%\ucoin\duniter-%APPVEYOR_REPO_TAG_NAME%-windows-x64.zip
   - iscc %cd%\ucoin_release\sources\duniter.iss /DROOT_PATH=%cd%\ucoin_release
-  - move %cd%\ucoin_release\Duniter.exe %cd%\ucoin\
+  - move %cd%\ucoin_release\Duniter.exe %cd%\ucoin\duniter-%APPVEYOR_REPO_TAG_NAME%-windows-x64.exe
 
 artifacts:
-  - path: Duniter.exe
+  - path: duniter*.exe
     name: DuniterEXE
-  - path: duniter-win-x64.zip
+  - path: duniter*.zip
     name: Duniter
 
 deploy:

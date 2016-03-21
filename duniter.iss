@@ -46,9 +46,9 @@ Source: "{#MyAppSrc}\nw\*"; DestDir: "{app}\nw\"; Flags: ignoreversion recursesu
 Source: "{#MyAppSrc}\sources\*"; DestDir: "{app}\sources\"; Flags: ignoreversion recursesubdirs
 
 [Icons]
-Name: "{group}\{#MyAppName}"; Filename: "{app}\nw\{#MyAppExeName}"
+Name: "{group}\{#MyAppName}"; IconFilename: "{app}\nw\duniter.ico"; Filename: "{app}\nw\{#MyAppExeName}"
 Name: "{group}\{cm:UninstallProgram,{#MyAppName}}"; Filename: "{uninstallexe}"
-Name: "{commondesktop}\{#MyAppName}"; Filename: "{app}\nw\{#MyAppExeName}"; Tasks: desktopicon
+Name: "{commondesktop}\{#MyAppName}"; IconFilename: "{app}\nw\duniter.ico"; Filename: "{app}\nw\{#MyAppExeName}"; Tasks: desktopicon
 
 [Run]
 Filename: "{app}\nw\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
