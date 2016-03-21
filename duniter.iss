@@ -10,20 +10,12 @@
 #define MyAppSrc ROOT_PATH
 #define MyAppExe ROOT_PATH + "\nw\" + MyAppExeName
 #pragma message MyAppSrc
-#pragma message {#MyAppName}_v{#MyAppVerStr}
-
-#if !FileExists(MyAppSrc)
-#error "Unable to find MyAppSrc"
-#endif
 
 #if !FileExists(MyAppExe)
 #error "Unable to find MyAppExe"
 #endif
 
-#define FileVerStr GetFileVersion(MyAppExe)
-#define StripBuild(str VerStr) Copy(VerStr, 1, RPos(".", VerStr)-1)
-#define MyAppVerStr StripBuild(FileVerStr)
-#define MyAppVerName MyAppName + " v" + MyAppVerStr
+#define MyAppVerStr "v0.20.0a18"
 
 [Setup]
 AppName={#MyAppName}
@@ -50,7 +42,8 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "{#MyAppSrc}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "{#MyAppSrc}\nw\*"; DestDir: "{app}\nw\"; Flags: ignoreversion recursesubdirs
+Source: "{#MyAppSrc}\sources\*"; DestDir: "{app}\sources\"; Flags: ignoreversion recursesubdirs
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\nw\{#MyAppExeName}"
