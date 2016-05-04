@@ -25,8 +25,8 @@ after_test:
   - set SRC=%cd%
   - echo %SRC%
   - copy misc\MSVSVersion.py %APPDATA%\npm\node_modules\nw-gyp\gyp\pylib\gyp\MSVSVersion.py
-  - set NW_VERSION=0.13.0-rc3
-  - set NW_RELEASE=v0.13.0-rc3
+  - set NW_VERSION=0.14.3
+  - set NW_RELEASE=v0.14.3
   - echo %NW_RELEASE%
   - cd node_modules/wotb
   - npm install --build-from-source
