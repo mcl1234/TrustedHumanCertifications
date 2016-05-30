@@ -63,8 +63,8 @@ after_test:
   - mkdir %cd%\duniter_release\sources
   - xcopy %SRC%\gui\* %cd%\duniter_release\nw\ /s /e
   - xcopy %SRC%\* %cd%\duniter_release\sources\ /s /e
-  - rd /s /q %cd%\duniter_release\sources\ui\node_modules
-  - rd /s /q %cd%\duniter_release\sources\ui\bower_components
+  - rd /s /q %cd%\duniter_release\sources\ui\package\node_modules
+  - rd /s /q %cd%\duniter_release\sources\ui\package\bower_components
   - iscc %cd%\duniter_release\sources\duniter.iss /DROOT_PATH=%cd%\duniter_release
   - move %cd%\duniter_release\Duniter.exe %cd%\duniter\duniter-%APPVEYOR_REPO_TAG_NAME%-windows-x64.exe
 
