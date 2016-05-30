@@ -10,8 +10,6 @@ install:
   - echo %ADDON_VERSION%
   - ps: Install-Product node $env:nodejs_version $env:platform
   - node -v
-  - npm install -g npm
-  - npm install -g nw-gyp node-pre-gyp
   - npm install
 
 test_script:
@@ -20,8 +18,9 @@ test_script:
 build: off
 
 after_test:
-  - cd ui
+  - git submodule init
   - git submodule update
+  - cd ui
   - npm install
   - cd ..
   - rd /s /q %APPDATA%\..\Local\NuGet\Cache
