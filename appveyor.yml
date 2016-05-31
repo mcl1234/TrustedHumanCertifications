@@ -23,7 +23,10 @@ after_test:
   - powershell .\\ci\\appveyor\\inno_setup.ps1
   - rd /s /q %APPDATA%\..\Local\NuGet\Cache
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
-  # GUI Version
+  - git submodule update
+  - cd web-ui
+  - npm install
+  - cd ..
   - set SRC=%cd%
   - echo %SRC%
   - copy misc\MSVSVersion.py %APPDATA%\npm\node_modules\nw-gyp\gyp\pylib\gyp\MSVSVersion.py
@@ -64,8 +67,8 @@ after_test:
   - mkdir %cd%\duniter_release\sources
   - xcopy %SRC%\gui\* %cd%\duniter_release\nw\ /s /e
   - xcopy %SRC%\* %cd%\duniter_release\sources\ /s /e
-  - rd /s /q %cd%\duniter_release\sources\ui\package\node_modules
-  - rd /s /q %cd%\duniter_release\sources\ui\package\bower_components
+  - rd /s /q %cd%\duniter_release\sources\web-ui\node_modules
+  - rd /s /q %cd%\duniter_release\sources\web-ui\bower_components
   - iscc %cd%\duniter_release\sources\duniter.iss /DROOT_PATH=%cd%\duniter_release
   - move %cd%\duniter_release\Duniter.exe %cd%\duniter\duniter-%APPVEYOR_REPO_TAG_NAME%-windows-x64.exe
 
