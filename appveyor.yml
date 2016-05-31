@@ -21,8 +21,8 @@ build: off
 
 after_test:
   - rd /s /q %APPDATA%\..\Local\NuGet\Cache
-  - choco install -y 7zip InnoSetup
-  - set PATH="C:\Program Files\7-Zip";"C:\Program Files (x86)\Inno Setup 5";%PATH%
+  - choco install -y InnoSetup
+  - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
   # GUI Version
   - set SRC=%cd%
   - echo %SRC%
