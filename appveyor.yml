@@ -23,9 +23,8 @@ after_test:
   - powershell .\\ci\\appveyor\\inno_setup.ps1
   - rd /s /q %APPDATA%\..\Local\NuGet\Cache
   - set PATH="C:\Program Files (x86)\Inno Setup 5";%PATH%
-  - dir "web-ui"
+  - git submodule init
   - git submodule update
-  - dir "web-ui"
   - cd "web-ui"
   - dir
   - npm install
