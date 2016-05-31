@@ -47,4 +47,5 @@ deploy:
     - /home/travis/build/duniter-${TRAVIS_TAG}-${TRAVIS_OS_NAME}-x64.tar.gz
     on:
       repo: duniter/duniter
+      branch: webui
       tags: false
