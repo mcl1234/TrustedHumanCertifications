@@ -4,7 +4,7 @@
 
 Duniter (previously uCoin) is a libre software allowing to create a new kind of P2P crypto-currencies based on individuals and Universal Dividend.
 
-Inspired by [Bitcoin](https://github.com/bitcoin/bitcoin) and [OpenUDC](https://github.com/Open-UDC/open-udc) projects.
+Inspired by  [OpenUDC](https://github.com/Open-UDC/open-udc) projects.
 
 ## Development state
 
