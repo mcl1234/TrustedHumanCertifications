@@ -2,17 +2,17 @@
 
 # Duniter [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
 
-Duniter (previously uCoin) is a libre software allowing to create a new kind of P2P crypto-currencies based on individuals and Universal Dividend.
+It is a libre software and a distributed network to create Peer-to-Peer communities based on trusted human certifications and everyone can transmit a Universal Dividend periodically.
 
-Inspired by  [OpenUDC](https://github.com/Open-UDC/open-udc) projects.
+Inspired by the [OpenUDC](https://github.com/Open-UDC/open-udc) project.
 
 ## Development state
 
-Software is still under development, and **no production currency using Duniter exists for now**.
+The software is still under development.
 
-However, it already exists a testing currency named [Test_Net](https://forum.duniter.org/t/join-our-new-testnet-currency/813). Want to test it? Two ways.
+However, it already exists a testing community named [Test_Net](https://forum.duniter.org/t/join-our-new-testnet-currency/813). Want to test it ? Two ways.
 
-### Add your node to the network
+### Add your node to the distributed network
 
 ```
 $ wget -qO- https://raw.githubusercontent.com/duniter/duniter/master/install.sh | bash
@@ -21,19 +21,30 @@ $ duniter sync duniter.org 8999
 $ duniter start
 ```
 
-and you are done! See [Install documentation](https://github.com/duniter/duniter/wiki/Install-Duniter-node) for further details.
+and you are done. 
+See [Install documentation](https://github.com/duniter/duniter/wiki/Install-Duniter-node) for further details.
 
-### Try Sakia Wallet
+### Try Cesium explorer
 
-In the world of crypto-currencies, [Sakia Wallet](http://sakia-wallet.org/) would be called a [SPV](https://en.bitcoin.it/wiki/Thin_Client_Security#Simplified_Payment_Verification_.28SPV.29_Clients) client. It is a graphical client connecting to the network. See this [tutorial](https://forum.duniter.org/t/join-our-new-testnet-currency/813) to join in the testing currency with Sakia.
+[Cesium explorer](http://cesium.duniter.fr)
+It is a browser application connecting to the distributed network. 
+See this [tutorial](https://forum.duniter.org/t/join-our-new-testnet-currency/813) to join in the testing community with Sakia explorer.
 
-<p align="center"><img src="http://sakia-wallet.org/img/Dividends.png" /></p>
+
+### Try Sakia explorer
+
+[Sakia explorer](http://sakia-wallet.org)
+It is a application connecting to the distributed network. 
+See this [tutorial](https://forum.duniter.org/t/join-our-new-testnet-currency/813) to join in the testing community with Sakia explorer.
+
+<p align="center"> <img src="http://sakia-wallet.org/img/Dividends.png" /> </p>
+
 
 ## Going further
 
 ### Documentation
 
-Visit [Duniter website](https://duniter.org): it gathers theoretical informations, FAQ and several useful links. If you want to learn, this is the first place to visit.
+Visit [Duniter site](https://duniter.org): it gathers theoretical informations, FAQ and several useful links. If you want to learn, this is the first place to visit.
 
 ### Talk about/get involved in Duniter project
 
@@ -44,11 +55,6 @@ If you wish to participate/debate on Duniter, you can:
 * join diffusion list [https://groups.google.com/forum/?hl=fr#!forum/ucoin](https://groups.google.com/forum/?hl=fr#!forum/ucoin)
 * contact us directly at [contact@duniter.org](mailto:contact@duniter.org)
 
-# References
-
-## Theoretical
-* [[en] Relative theory of money](http://en.trm.creationmonetaire.info)
-* [[fr] Théorie relative de la monaie](http://trm.creationmonetaire.info)
 
 ## OpenUDC
 
