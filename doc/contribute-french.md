@@ -528,7 +528,7 @@ Ces valeurs ont été retournées par votre nœud local, c'est celui-ci qui a r�
 
 Et donc, votre noeud a répondu cela en conséquence de votre appel à l'URI particulière `/node/summary`. Si vous testez d'autres URIs, les résultats seront différents. Voyons-en d'autres.
 
-### Le block courant ave `/blockchain/current`
+### Le block (document JSON) courant avec `/blockchain/current`
 
 Essayons cette URL :
 
