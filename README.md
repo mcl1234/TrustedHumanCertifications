@@ -1,4 +1,4 @@
-![Duniter logo](https://raw.github.com/duniter/duniter/master/duniter-logos/250×250.png)
+![Mezuri poweit logo](https://ipfs.pics/ipfs/QmUDP4hat3Dj2ryz1NdnNNzu9Svnk7nLf2xeEsyS4q4GNt)
 
 # Duniter [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
 
