@@ -1,6 +1,6 @@
-![Mezuri poweit logo](https://ipfs.pics/ipfs/QmUDP4hat3Dj2ryz1NdnNNzu9Svnk7nLf2xeEsyS4q4GNt)
+![TrustedHumanCertifications poweit logo](https://ipfs.pics/ipfs/QmUDP4hat3Dj2ryz1NdnNNzu9Svnk7nLf2xeEsyS4q4GNt)
 
-# Duniter [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
+# TrustedHumanCertifications [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
 
 It is a libre software and a distributed network to create Peer-to-Peer communities based on trusted human certifications and everyone can transmit a Universal Dividend periodically.
 
@@ -24,14 +24,14 @@ $ duniter start
 and you are done. 
 See [Install documentation](https://github.com/duniter/duniter/wiki/Install-Duniter-node) for further details.
 
-### Try Cesium explorer
+### Try Cesium explorer for HTML5
 
 [Cesium explorer](http://cesium.duniter.fr)
 It is a browser application connecting to the distributed network. 
 See this [tutorial](https://forum.duniter.org/t/join-our-new-testnet-currency/813) to join in the testing community with Sakia explorer.
 
 
-### Try Sakia explorer
+### Try Sakia explorer for Qt
 
 [Sakia explorer](http://sakia-wallet.org)
 It is a application connecting to the distributed network. 
