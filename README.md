@@ -1,4 +1,4 @@
-![TrustedHumanCertifications poweit logo](https://ipfs.pics/QmUK7u7M1tszJZ9fo5Y22jYAP5PiEGNF3Fo2GtUd6WPWAE)
+![TrustedHumanCertifications poweit logo](https://ipfs.pics/ipfs/QmUK7u7M1tszJZ9fo5Y22jYAP5PiEGNF3Fo2GtUd6WPWAE)
 
 # TrustedHumanCertifications [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
 
