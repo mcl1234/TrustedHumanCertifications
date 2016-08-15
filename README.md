@@ -24,16 +24,16 @@ $ duniter start
 and you are done. 
 See [Install documentation](https://github.com/duniter/duniter/wiki/Install-Duniter-node) for further details.
 
-### Try Cesium explorer with HTML5 environement
+### Try Cesium explorer with HTML5 environment
 
-[Cesium explorer](http://cesium.duniter.fr)
+[Cesium explorer in JavaScript](http://cesium.duniter.fr)
 It is a browser application connecting to the distributed network. 
 See this [tutorial](https://forum.duniter.org/t/join-our-new-testnet-currency/813) to join in the testing community with Sakia explorer.
 
 
-### Try Sakia explorer with Qt environement
+### Try Sakia explorer with Qt environment
 
-[Sakia explorer](http://sakia-wallet.org)
+[Sakia explorer in Qt](http://sakia-wallet.org)
 It is a application connecting to the distributed network. 
 See this [tutorial](https://forum.duniter.org/t/join-our-new-testnet-currency/813) to join in the testing community with Sakia explorer.
 
