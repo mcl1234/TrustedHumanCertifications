@@ -1,6 +1,6 @@
 ![Universal network of communities based on trusted human certifications poweit logo](https://ipfs.pics/ipfs/QmUK7u7M1tszJZ9fo5Y22jYAP5PiEGNF3Fo2GtUd6WPWAE)
 
-# TrustedHumanCertifications [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
+# Universal network of communities based on trusted human certifications [![Build Status](https://api.travis-ci.org/duniter/duniter.png)](https://travis-ci.org/duniter/duniter) [![Coverage Status](https://coveralls.io/repos/duniter/duniter/badge.svg?branch=master&service=github)](https://coveralls.io/github/duniter/duniter?branch=master)
 
 It is a common open source code software and a distributed network to create Peer-to-Peer communities based on trusted human certifications and everyone can generate an Universal Dividend periodically.
 
